@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import { createServer } from "http";
 import SocketService from "./services/socket";
 import entryRouter from './routers/index';
+import dotenv from 'dotenv';
+dotenv.config()
 
 const PORT = 8000;
 

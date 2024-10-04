@@ -7,13 +7,15 @@
     "start": "node dist/server",
     "build": "tsc -p . --listFiles --traceResolution",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc-watch --onSuccess \"node dist/server.js\""
+    "dev": "tsc-watch --onSuccess \"node -r dotenv/config dist/server.js dotenv_config_path=.env.development\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "googleapis": "^144.0.0",
     "nodemon": "^3.1.7",
     "socket.io": "^4.8.0"
   },
